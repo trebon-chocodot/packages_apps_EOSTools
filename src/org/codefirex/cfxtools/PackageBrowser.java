@@ -29,6 +29,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,10 +77,10 @@ public class PackageBrowser extends ListActivity {
         public void bindView(View view, MyPackageInfo info) {
             ImageView icon = (ImageView)view.findViewById(R.id.icon);
             TextView name = (TextView)view.findViewById(R.id.name);
-            //TextView description = (TextView)view.findViewById(R.id.description);
+            TextView description = (TextView)view.findViewById(R.id.description);
             icon.setImageDrawable(info.info.applicationInfo.loadIcon(getPackageManager()));
             name.setText(info.label);
-            //description.setText(info.info.packageName);
+            description.setText(info.info.packageName);
         }
     }
 
@@ -155,7 +156,11 @@ public class PackageBrowser extends ListActivity {
             mAdapter.itemForPosition(position);
         if (info != null) {
             Intent returnIntent = new Intent();
-            returnIntent.putExtra("result", Uri.fromParts("package", info.info.packageName, null));
+            String myComponent = getPackageManager()
+                    .getLaunchIntentForPackage(info.info.packageName).getComponent()
+                    .flattenToString();
+            returnIntent.putExtra("result", myComponent);
+            Log.i("CFXTools", "PackageBrowser result = " + myComponent);
             setResult(RESULT_OK, returnIntent);
         } else {
             Intent returnIntent = new Intent();
