@@ -160,6 +160,7 @@ public class PackageBrowser extends ListActivity {
                     .getLaunchIntentForPackage(info.info.packageName).getComponent()
                     .flattenToString();
             returnIntent.putExtra("result", myComponent);
+            returnIntent.putExtra("label", info.label);
             Log.i("CFXTools", "PackageBrowser result = " + myComponent);
             setResult(RESULT_OK, returnIntent);
         } else {
