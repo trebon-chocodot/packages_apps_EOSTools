@@ -26,6 +26,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="ColorPicker" 
+            android:label="ColorPicker"
+            android:theme="@android:style/Theme.Dialog"
+            android:excludeFromRecents="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
     </application>
 </manifest>
