@@ -166,6 +166,9 @@ public class ColorPicker extends Activity {
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
+                int buttonWidth = Math.round(((viewSatVal.getWidth() + viewHue.getWidth()) / 2) + 12);
+                mOk.setWidth(buttonWidth);
+                mCancel.setWidth(buttonWidth);
                 moveCursor();
                 moveTarget();
                 view.getViewTreeObserver().removeGlobalOnLayoutListener(this);
