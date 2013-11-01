@@ -17,10 +17,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="org.codefirex.cfxtools"
         android:versionCode="1" android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
 
     <application android:label="CFX Tools"
             android:icon="@mipmap/ic_launcher_devtools">
-        <activity android:name="PackageBrowser" android:label="Package Browser">
+        <activity android:name="PackageBrowser" android:label="Package Browser"
+            android:excludeFromRecents="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -35,6 +44,35 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".weather.WeatherActivity" 
+            android:label="CFX Weather" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".weather.WeatherService" />
+        <service android:name=".weather.WeatherLocation" />
+
+        <receiver android:name=".weather.WeatherReceiver">
+            <intent-filter>
+                <action android:name="cfx_query_weather_service" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".weather.WeatherBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".weather.ConnectivityListener">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 </manifest>

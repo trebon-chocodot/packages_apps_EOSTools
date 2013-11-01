@@ -16,22 +16,14 @@
 
 package org.codefirex.cfxtools;
 
-import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.pm.IPackageDeleteObserver;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.content.BroadcastReceiver;
 import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.RemoteException;
-import android.os.Handler;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;

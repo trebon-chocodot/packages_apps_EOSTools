@@ -1,11 +1,13 @@
 package org.codefirex.cfxtools.ambilwarna;
 
-import android.app.*;
-import android.content.*;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.graphics.*;
+import android.graphics.Color;
 import android.view.*;
-import android.widget.*;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import org.codefirex.cfxtools.R;
 
 public class AmbilWarnaDialog {

@@ -1,15 +1,18 @@
 
 package org.codefirex.cfxtools;
 
-import android.app.*;
-import android.content.*;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
-import android.graphics.*;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.*;
 import android.view.View.OnClickListener;
-import android.widget.*;
-import org.codefirex.cfxtools.R;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import org.codefirex.cfxtools.ambilwarna.AmbilWarnaKotak;
 
 public class ColorPicker extends Activity {
@@ -46,7 +49,7 @@ public class ColorPicker extends Activity {
         super.onCreate(savedInstanceState);
 
         int color = getIntent().getIntExtra("oldColor",
-                getResources().getInteger(com.android.internal.R.color.holo_blue_light));
+                getResources().getInteger(android.R.color.holo_blue_light));
         Color.colorToHSV(color, currentColorHsv);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);

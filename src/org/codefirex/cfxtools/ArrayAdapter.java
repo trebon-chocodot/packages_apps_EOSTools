@@ -17,9 +17,9 @@
 package org.codefirex.cfxtools;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.LayoutInflater;
 import android.widget.BaseAdapter;
 
 import java.util.List;

@@ -20,4 +20,23 @@
 <resources>
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
+    <string name="cfx_weather">CFX Weather</string>
+    <string name="weather_toggle_service_title">Enable service</string>
+    <string name="one_minute">1 minute (debug)</string>
+    <string name="fifteen_minutes">15 minutes</string>
+    <string name="thirty_minutes">30 minutes</string>
+    <string name="one_hour">1 hour</string>
+    <string name="three_hours">3 hours</string>
+    <string name="six_hours">6 hours</string>
+    <string name="weather_refresh_interval_title">Refresh interval</string>
+    <string name="weather_fahrenheit">Fahrenheit</string>
+    <string name="weather_celsius">Celsius</string>
+    <string name="weather_temp_scale_title">Temperature scale</string>
+    <string name="refresh">Refresh</string>
+    <string name="location_mode_title">Location mode</string>
+    <string name="location_network">Network</string>
+    <string name="location_fused">Let Android decide</string>
+    <string name="location_passive">Passive GPS</string>
+    <string name="location_gps">GPS</string>
+
 </resources>

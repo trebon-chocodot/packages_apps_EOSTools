@@ -7,8 +7,6 @@ import android.os.Parcelable;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
-
-import org.codefirex.cfxtools.ambilwarna.AmbilWarnaDialog;
 import org.codefirex.cfxtools.R;
 
 public class AmbilWarnaPreference extends Preference {
