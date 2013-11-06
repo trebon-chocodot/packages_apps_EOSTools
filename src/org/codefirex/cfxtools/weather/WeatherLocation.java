@@ -24,6 +24,8 @@ import android.os.IBinder;
  */
 
 public class WeatherLocation extends Service {
+	private static final String TAG = "WeatherLocation";
+
     static final String LOCATION_ACQUIRED_ACTION = "location_acquired";
     static final String LOCATION_UNAVAILABLE_ACTION = "location_unavailable";
     static final String LOCATION_EXTRA = "location_extra";
@@ -82,6 +84,8 @@ public class WeatherLocation extends Service {
         mFilter = new IntentFilter();
         mFilter.addAction(WeatherReceiver.ACTION);
         mFilter.addAction(ALARM_TICKED);
+        mFilter.addAction(Intent.ACTION_SCREEN_ON);
+        mFilter.addAction(Intent.ACTION_SCREEN_OFF);
 
         mReceiver = new BroadcastReceiver() {
             @Override
@@ -97,6 +101,11 @@ public class WeatherLocation extends Service {
                         resetLocationListener();
                     }
                 } else if (action.equals(ALARM_TICKED)) {
+                    resetLocationListener();
+                } else if (action.equals(Intent.ACTION_SCREEN_OFF)) {
+                	cancelAlarm();                	
+                } else if (action.equals(Intent.ACTION_SCREEN_ON)) {
+                    resetAlarm();
                     resetLocationListener();
                 }
             }

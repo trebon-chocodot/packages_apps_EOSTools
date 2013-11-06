@@ -59,20 +59,9 @@
         <receiver android:name=".weather.WeatherReceiver">
             <intent-filter>
                 <action android:name="cfx_query_weather_service" />
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name=".weather.WeatherBootReceiver">
-            <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name=".weather.ConnectivityListener">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-        </receiver>
-
     </application>
 </manifest>
