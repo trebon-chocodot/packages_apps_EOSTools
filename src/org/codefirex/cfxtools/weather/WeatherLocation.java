@@ -28,8 +28,9 @@ public class WeatherLocation extends Service {
 
     static final String LOCATION_ACQUIRED_ACTION = "location_acquired";
     static final String LOCATION_UNAVAILABLE_ACTION = "location_unavailable";
+    static final String LOCATION_REFRESHING = "location_refreshing";
     static final String LOCATION_EXTRA = "location_extra";
-    
+
     static final String INTERVAL_CHANGED = "interval_changed";
     static final String LOCATION_MODE_CHANGED = "location_mode_changed";
     static final String SCALE_CHANGED = "scale_changed";
@@ -54,7 +55,7 @@ public class WeatherLocation extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         getPosition();
-        return Service.START_REDELIVER_INTENT;
+        return Service.START_STICKY;
     }
 
     @Override
@@ -117,6 +118,10 @@ public class WeatherLocation extends Service {
     }
 
     private void resetLocationListener() {
+    	Intent intent = new Intent();
+    	intent.setAction(LOCATION_REFRESHING);
+    	sendBroadcast(intent);
+
         removeLocationListener();
         mLocationManager.requestLocationUpdates(WeatherPrefs.getLocationMode(this),
                 0,

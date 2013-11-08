@@ -3,5 +3,11 @@
 	<dimen name="ambilwarna_hsvHeight">240dp</dimen>
 	<dimen name="ambilwarna_hsvWidth">240dp</dimen>
 	<dimen name="ambilwarna_hueWidth">30dp</dimen>
-	<dimen name="ambilwarna_spacer">8dp</dimen>
+	<dimen name="ambilwarna_spacer">8dp</dimen>	
+	
+	<!-- Weather forecast view -->
+	<dimen name="forecast_view_padding">12dp</dimen>
+	<dimen name="forecast_yahoo_logo">48dp</dimen>
+	<dimen name="forecast_days_padding">5dp</dimen>
+	<dimen name="forecast_row_margin">10dp</dimen>
 </resources>

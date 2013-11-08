@@ -10,11 +10,10 @@ public class WeatherUtils {
 
     protected static String makeTempString(boolean isF, String temp_f, String temp_c) {
         String theTemp = isF ? temp_f : temp_c;
-        String theLetter = isF ? "F" : "C";
+//        String theLetter = isF ? "F" : "C";
         StringBuilder b = new StringBuilder()
                 .append(theTemp)
-                .append(degree)
-                .append(theLetter);
+                .append(degree);
         return b.toString();
     }
 

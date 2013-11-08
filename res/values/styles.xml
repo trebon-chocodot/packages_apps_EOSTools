@@ -72,5 +72,10 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+    <!-- Weather forecast -->
+    <style name="WeatherText" parent="android:TextAppearance">
+    </style>
+    
+
 </resources>
 

@@ -45,9 +45,7 @@
         android:title="@string/weather_temp_scale_title"
         android:dependency="weather_toggle_service" />
 
-    <Preference
-        android:key="weather_refresh"
-        android:title="@string/refresh"
-        android:dependency="weather_toggle_service" />
+     <org.codefirex.cfxtools.weather.ForecastPreference
+        android:key="weather_forecast" />
 
 </PreferenceScreen>
