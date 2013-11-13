@@ -107,15 +107,8 @@ public class YahooWeatherUtils {
 		try {
 			parser = dbFactory.newDocumentBuilder();
 			dest = parser.parse(new ByteArrayInputStream(src.getBytes()));
-		} catch (ParserConfigurationException e1) {
-			e1.printStackTrace();
-	         Log.i(TAG, e1.toString());
-		} catch (SAXException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-	         Log.i(TAG, e.toString());
-		} catch (IOException e) {
-			e.printStackTrace();
-	         Log.i(TAG, e.toString());
 		}
 
 		return dest;
@@ -181,7 +174,6 @@ public class YahooWeatherUtils {
 			
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			Toast.makeText(context, "Parse XML failed - Unrecognized Tag", Toast.LENGTH_SHORT).show();
 			weatherInfo = null;
 		}
 		

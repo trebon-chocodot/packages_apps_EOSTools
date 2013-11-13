@@ -17,35 +17,36 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/cfx_weather" >
 
-    <CheckBoxPreference
-        android:key="weather_toggle_service"
-        android:title="@string/weather_toggle_service_title" />
+    <org.codefirex.cfxtools.weather.ForecastPreference android:key="weather_forecast" />
 
-    <ListPreference
-        android:defaultValue="network"
-        android:entries="@array/weather_location_entries"
-        android:entryValues="@array/weather_location_values"
-        android:key="weather_location_mode"
-        android:title="@string/location_mode_title"
-        android:dependency="weather_toggle_service" />
+    <PreferenceCategory
+        android:key="settings_category"
+        android:title="@string/settings" >
 
-    <ListPreference
-        android:defaultValue="15"
-        android:entries="@array/weather_interval_entries"
-        android:entryValues="@array/weather_interval_values"
-        android:key="weather_interval"
-        android:title="@string/weather_refresh_interval_title"
-        android:dependency="weather_toggle_service" />
+        <ListPreference
+            android:defaultValue="network"
+            android:entries="@array/weather_location_entries"
+            android:entryValues="@array/weather_location_values"
+            android:key="weather_location_mode"
+            android:title="@string/location_mode_title" />
 
-    <ListPreference
-        android:defaultValue="1"
-        android:entries="@array/weather_temp_scale_entries"
-        android:entryValues="@array/weather_temp_scale_values"
-        android:key="weather_temp_scale"
-        android:title="@string/weather_temp_scale_title"
-        android:dependency="weather_toggle_service" />
+        <ListPreference
+            android:defaultValue="15"
+            android:entries="@array/weather_interval_entries"
+            android:entryValues="@array/weather_interval_values"
+            android:key="weather_interval"
+            android:title="@string/weather_refresh_interval_title" />
 
-     <org.codefirex.cfxtools.weather.ForecastPreference
-        android:key="weather_forecast" />
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/weather_temp_scale_entries"
+            android:entryValues="@array/weather_temp_scale_values"
+            android:key="weather_temp_scale"
+            android:title="@string/weather_temp_scale_title" />
+
+        <Preference 
+            android:key="credits_pref"
+            android:title="@string/credits" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

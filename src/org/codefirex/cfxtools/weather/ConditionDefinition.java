@@ -15,7 +15,9 @@
  * limitations under the License.
  */
 
-package zh.wang.android.utils.YahooWeather4a;
+package org.codefirex.cfxtools.weather;
+
+import org.codefirex.cfxtools.R;
 
 public class ConditionDefinition {
 	
@@ -71,6 +73,65 @@ public class ConditionDefinition {
 			"not available",
 	};
 	
+	int[] conditionIcon = new int[] {
+			R.drawable.tornado,
+			R.drawable.heavy_rain,
+			R.drawable.rain_tornado,
+			R.drawable.rain_thunder,
+			R.drawable.rain_thunder,
+			R.drawable.rain_snow,
+			R.drawable.ice,
+			R.drawable.ice_snow,
+			R.drawable.ice,
+			R.drawable.rain,
+			R.drawable.ice,
+			R.drawable.heavy_rain,
+			R.drawable.heavy_rain,
+			R.drawable.snow,
+			R.drawable.rain_snow,
+			R.drawable.heavysnow,
+			R.drawable.snow,
+			R.drawable.ice,
+			R.drawable.ice_snow,
+			R.drawable.sunny,
+			R.drawable.foggy,
+			R.drawable.sunny,
+			R.drawable.heat,
+			R.drawable.sunny,
+			R.drawable.partly_cloudy,
+			R.drawable.cold,
+			R.drawable.cloudy,
+			R.drawable.cloudy_night,
+			R.drawable.cloudy,
+			R.drawable.cloudy_night,
+			R.drawable.partly_cloudy,
+			R.drawable.clear_night,
+			R.drawable.sunny,
+			R.drawable.clear_night,
+			R.drawable.sunny,
+			R.drawable.clear_night,
+			R.drawable.sunny,
+			R.drawable.ice_snow,
+			R.drawable.heat,
+			R.drawable.rain_thunder,
+			R.drawable.rain_thunder,
+			R.drawable.night_rain_thunder,
+			R.drawable.rain,
+			R.drawable.rain_snow,
+			R.drawable.rain_snow,
+			R.drawable.rain_snow,
+			R.drawable.partly_cloudy,
+			R.drawable.rain_thunder_sun,
+			R.drawable.snow_thunder_sun,
+			R.drawable.rain_thunder_sun,
+			R.drawable.sunny
+	};
+
+	public int getIconByCode(int code) {
+		if (code == -1) return R.drawable.sunny;
+		return conditionIcon[code];
+	}
+
 	public String getConditionByCode(int code) {
 		return conditionArray[code];
 	}

@@ -8,6 +8,9 @@
 	<!-- Weather forecast view -->
 	<dimen name="forecast_view_padding">12dp</dimen>
 	<dimen name="forecast_yahoo_logo">48dp</dimen>
+	<dimen name="forecast_days_icon">72dp</dimen>
 	<dimen name="forecast_days_padding">5dp</dimen>
-	<dimen name="forecast_row_margin">10dp</dimen>
+	<dimen name="forecast_credit_dialog_padding">4dp</dimen>
+	<dimen name="forecast_row_margin">20dp</dimen>
+	<dimen name="forecast_small_temp_margin">5dp</dimen>
 </resources>

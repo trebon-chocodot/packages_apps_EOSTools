@@ -126,15 +126,8 @@ public class WOEIDUtils {
 		try {
 			parser = dbFactory.newDocumentBuilder();
 			dest = parser.parse(new ByteArrayInputStream(src.getBytes()));
-		} catch (ParserConfigurationException e1) {
-			e1.printStackTrace();
-			Log.i(TAG, e1.toString());
-		} catch (SAXException e) {
+		} catch (Exception e){
 			e.printStackTrace();
-	         Log.i(TAG, e.toString());
-		} catch (IOException e) {
-			e.printStackTrace();
-	        Log.i(TAG, e.toString());
 		}
 
 		return dest;
