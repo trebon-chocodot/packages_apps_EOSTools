@@ -70,12 +70,7 @@
     <style name="TextAppearance.info_value">
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">normal</item>
-    </style>
-
-    <!-- Weather forecast -->
-    <style name="WeatherText" parent="android:TextAppearance">
-    </style>
-    
+    </style>  
 
 </resources>
 

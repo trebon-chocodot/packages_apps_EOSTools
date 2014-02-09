@@ -18,43 +18,8 @@
 */
 -->
 <resources>
-    <string name="on">On</string>
-    <string name="off">Off</string>
     <string name="cancel">Cancel</string>
     <string name="apply">Apply</string>
     <string name="settings">Settings</string>
-    <string name="cfx_weather">CFX Weather</string>
-    <string name="enable">Enable</string>
-    <string name="one_minute">1 minute (debug)</string>
-    <string name="fifteen_minutes">15 minutes</string>
-    <string name="thirty_minutes">30 minutes</string>
-    <string name="one_hour">1 hour</string>
-    <string name="three_hours">3 hours</string>
-    <string name="six_hours">6 hours</string>
-    <string name="weather_refresh_interval_title">Refresh interval</string>
-    <string name="weather_fahrenheit">Fahrenheit</string>
-    <string name="weather_celsius">Celsius</string>
-    <string name="weather_temp_scale_title">Temperature scale</string>
-    <string name="refresh">Refresh</string>
-    <string name="location_mode_title">Location mode</string>
-    <string name="location_network">Network</string>
-    <string name="location_fused">Let system decide</string>
-    <string name="location_passive">Passive GPS</string>
-    <string name="location_gps">GPS</string>
-    <string name="wind">Wind</string>
-    <string name="wind_chill">Chill</string>
-    <string name="wind_speed">Speed</string>
-    <string name="wind_direction">Direction</string>
-    <string name="conditions">Conditions</string>
-    <string name="humidity">Humidity</string>
-    <string name="pressure">Pressure</string>
-    <string name="visibility">Visibility</string>
-    <string name="credits">Credits</string>
-    <string name="credits_deviant_art">deviantART</string>
-    <string name="credits_icon_name">SILq Weather Icons</string>
-    <string name="credits_icon_author">by d3stroy</string>
-    <string name="credits_icon_license">Used under the Creative Commons License</string>
-    <string name="credits_weather_service">Weather Service</string>
-    <string name="credits_yahoo">Powered by Yahoo!</string>
 
 </resources>
